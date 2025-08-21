@@ -7,8 +7,10 @@ program = "zellij"
 [window]
 padding.x = 16
 padding.y = 14
-decorations = "None"
+#decorations = "None"
 opacity = 0.98
+dimensions.columns = 140
+dimensions.lines = 38
 
 [keyboard]
 bindings = [
