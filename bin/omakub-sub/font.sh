@@ -26,7 +26,7 @@ set_font() {
 if [ "$#" -gt 1 ]; then
 	choice=${!#}
 else
-	choice=$(gum choose "Cascadia Mono" "Fira Mono" "JetBrains Mono" "Meslo" "> Change size" "<< Back" --height 8 --header "Choose your programming font")
+	choice=$(gum choose "Cascadia Mono" "Fira Mono" "JetBrains Mono" "Meslo" "Hack" "> Change size" "<< Back" --height 8 --header "Choose your programming font")
 fi
 
 case $choice in
@@ -41,6 +41,9 @@ case $choice in
 	;;
 "Meslo")
 	set_font "MesloLGS Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip" "ttf"
+	;;
+"Hack")
+	set_font "Hack Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Hack.zip" "ttf"
 	;;
 "> Change size")
 	source $OMAKUB_PATH/bin/omakub-sub/font-size.sh
